@@ -1,25 +1,23 @@
-// --- DOM SELECTORS ---
+
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const dateInput = document.getElementById('date-input');
 const todoList = document.getElementById('todo-list');
 const filter = document.getElementById('filter');
 
-// --- EVENT LISTENERS ---
 todoForm.addEventListener('submit', addTodo);
 todoList.addEventListener('click', handleTodoActions);
 filter.addEventListener('change', filterTodos);
 
-// --- FUNCTIONS ---
 
 /**
  * Adds a new to-do item to the list.
  * @param {Event} e - The form submission event.
  */
 function addTodo(e) {
-    e.preventDefault(); // Prevent page reload on form submit
-
-    // **Input Validation**
+    e.preventDefault(); 
+    
+    
     if (todoInput.value.trim() === '') {
         alert('Please enter a task!');
         return; // Stop the function if input is empty
